@@ -50,13 +50,18 @@ html {
     line-height: 1.5;
     font-family: "Driod Serif",georgia,serif;
     color: #5C6366;
-    padding: 48px 24px 24px;
     -webkit-font-smoothing:antialiased;
     -moz-osx-font-smoothing:grayscale;
+    box-sizing: border-box;
+}
+*,
+*::before,
+*::after{
+    box-sizing: inherit;
 }
 
 body {
-    max-width: 42em;
+
     margin: 0 auto;
 }
 
@@ -68,7 +73,7 @@ body {
  */
 
 ::selection {
-    background: #e85e00;
+    background: #00E6A1;
     color: white;
     text-shadow: none;
 }
@@ -198,7 +203,7 @@ a:focus {
 
 @media (min-width: 768px) {
     html {
-        padding: 48px 48px 24px;
+
     }
     h1 {
         font-size: 58px;
@@ -214,38 +219,86 @@ a:focus {
 
 @media (min-width: 1200px) {}
 
+
+
+/*
+    conponent author
+*/
+    .c-author{
+        display: flex;
+        align-items: center;
+    }
+    .c-author__image{
+        width: 56px;
+        height: 56px;
+        border-radius: 100%;
+        margin-right: 16px;
+    }
+    .c-author__meta,.c-author__name{
+        margin-bottom: 0;
+    }
+    .c-author__meta{
+        font-size: 14px;
+        font-family: "Inter UI","Helvetica Neue",Helvetica,arial,sans-serif;
+        line-height: 16px;
+        margin-top: 4px;
+    }
+    .c-author__name{
+        font-size: 16px;
+        line-height: 16px;
+    }
+    /*
+        conponent Article
+    */
+
+    .c-article__header,
+    .c-article__body{
+        max-width:1200px;
+        margin: 0 auto;
+    }
+    .c-article__header{
+        padding: 24px 24px 0;
+    }
+    .c-article__body{
+        padding: 0 24px;
+    }
+    /* Medium devices (tablets, 768px and up) */
+
+    @media (min-width: 768px) {
+        .c-article__header{
+            padding: 48px 48px 24px;
+
+        }
+        .c-article__author{
+            padding-bottom: 24px;
+        }
+        .c-article__body{
+            padding: 24px 48px;
+        }
+    }
+
+    /* Large devices (landscape tablets, desktops, 992px and up) */
+
+    @media (min-width: 992px) {
+        .c-article__body{
+            display: flex;
+            flex-wrap: wrap;
+        }
+        .c-article__author{
+            width: 25%;
+            padding-right: 24px;
+        }
+        .c-article__content{
+            width: 75%;
+        }
+    }
+
 /*
     Print styles.
     ---
     Inlined to avoid the additional HTTP request:
     http://www.phpied.com/delay-loading-your-print-css/
 */
-/*
-conponent auther
-*/
-.c-author{
-    display: flex;
-    align-items: center;
-}
-.c-author__image{
-    width: 56px;
-    height: 56px;
-    border-radius: 100%;
-    margin-right: 16px;
-}
-.c-author__meta,.c-author__name{
-    margin-bottom: 0;
-}
-.c-author__meta{
-    font-size: 14px;
-    font-family: "Inter UI","Helvetica Neue",Helvetica,arial,sans-serif;
-    line-height: 16px;
-    margin-top: 4px;
-}
-.c-author__name{
-    font-size: 16px;
-    line-height: 16px;
-}
 
 @media print {
     *,
