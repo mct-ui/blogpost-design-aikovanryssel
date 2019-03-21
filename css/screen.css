@@ -207,17 +207,27 @@ a:focus {
     }
     h1 {
         font-size: 58px;
-        line-height: 64px;
+        line-height: 56px;
     }
 }
 
 /* Large devices (landscape tablets, desktops, 992px and up) */
 
-@media (min-width: 992px) {}
+@media (min-width: 992px) {
+    h1 {
+        font-size: 58px;
+        line-height: 64px;
+    }
+}
 
 /* Extra large devices (large desktops, 1200px and up) */
 
-@media (min-width: 1200px) {}
+@media (min-width: 1200px) {
+    h1 {
+        font-size: 58px;
+        line-height: 72px;
+    }
+}
 
 
 
@@ -320,32 +330,6 @@ a:focus {
         }
     }
 
-    @media (min-width:1200px) {
-        .article__title{
-            max-width: auto;
-        }
-        .c-article__header{
-            max-width:2000px;
-            margin: 0 auto;
-        }
-        .c-article__author{
-            width: 25%;
-            padding-right: 24px;
-        }
-        .c-article__content{
-            width: 75%;
-        }
-        .c-author{
-            display: block;
-        }
-        .c-author__image{
-            margin-bottom: 16px;
-        }
-        .c-article__date{
-            margin-bottom: 16px;
-        }
-
-    }
 /*
     Print styles.
     ---
