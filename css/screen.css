@@ -262,18 +262,36 @@ a:focus {
     .c-article__body{
         padding: 0 24px;
     }
+    .c-article__date{
+        margin-bottom:8px;
+    }
+    .article__title{
+        margin: auto;
+    }
+
+    /*
+        max width
+        class to put speciftic max widhts onto elements
+    */
+    .u-max-width-sm{
+        max-width: 36em;
+    }
+
+
     /* Medium devices (tablets, 768px and up) */
 
     @media (min-width: 768px) {
         .c-article__header{
             padding: 48px 48px 24px;
-
         }
         .c-article__author{
             padding-bottom: 24px;
         }
         .c-article__body{
             padding: 24px 48px;
+        }
+        .c-article__date{
+            margin-bottom: auto;
         }
     }
 
@@ -291,8 +309,43 @@ a:focus {
         .c-article__content{
             width: 75%;
         }
+        .c-author{
+            display: block;
+        }
+        .c-author__image{
+            margin-bottom: 16px;
+        }
+        .c-article__date{
+            margin-bottom: 16px;
+        }
     }
 
+    @media (min-width:1200px) {
+        .article__title{
+            max-width: auto;
+        }
+        .c-article__header{
+            max-width:2000px;
+            margin: 0 auto;
+        }
+        .c-article__author{
+            width: 25%;
+            padding-right: 24px;
+        }
+        .c-article__content{
+            width: 75%;
+        }
+        .c-author{
+            display: block;
+        }
+        .c-author__image{
+            margin-bottom: 16px;
+        }
+        .c-article__date{
+            margin-bottom: 16px;
+        }
+
+    }
 /*
     Print styles.
     ---
