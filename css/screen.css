@@ -278,6 +278,13 @@ a:focus {
     .article__title{
         margin: auto;
     }
+    .c-article__chance{
+        color:#00E6A1;
+        font-style: italic;
+        font-size: 150%;
+        background-color: #F2FAF8;
+        padding: 24px;
+    }
 
     /*
         max width
